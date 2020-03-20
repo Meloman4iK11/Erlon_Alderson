@@ -1,0 +1,2661 @@
+local pitchup              = false
+local pitchdown            = false
+local pitchfakelag         = false
+local jitter               = false
+local sideways             = false
+local yawfakelag           = false
+local backward             = false
+local antiaim              = false
+local aasettings           = false
+local alsetting            = false
+local aimlock              = false
+local thirdperson          = false
+local fovchanger           = false
+local opened                = false
+local hidekey              = Enum.KeyCode.RightShift
+local YeetwareCBR = Instance.new("ScreenGui")
+local Introduce = Instance.new("Frame")
+local IntroduceTitel = Instance.new("TextLabel")
+local Updatenotes = Instance.new("TextLabel")
+local LoadToMain = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local ButtonFrame = Instance.new("Frame")
+local LegitButton = Instance.new("TextButton")
+local LegitFrame = Instance.new("Frame")
+local LegitAimlock = Instance.new("TextButton")
+local InfoAim = Instance.new("TextLabel")
+local FadedLogo = Instance.new("ImageLabel")
+local RageButton = Instance.new("TextButton")
+local RageFrame = Instance.new("Frame")
+local RageAimlock = Instance.new("TextButton")
+local Spinbot = Instance.new("TextButton")
+local InfoSpinbot = Instance.new("TextLabel")
+local InfoRAim = Instance.new("TextLabel")
+local Headshotguarantee = Instance.new("ImageLabel")
+local Bruh = Instance.new("ImageLabel")
+local VisualButton = Instance.new("TextButton")
+local VisualFrame = Instance.new("Frame")
+local ESP = Instance.new("TextButton")
+local ESPInfo = Instance.new("TextLabel")
+local AntiFlash = Instance.new("TextButton")
+local AntiFlashInfo = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local ThirdPersonInfo = Instance.new("TextLabel")
+local ESPpic = Instance.new("ImageLabel")
+local Lunarph = Instance.new("ImageLabel")
+local Yeahidk = Instance.new("ImageLabel")
+local MiscButton = Instance.new("TextButton")
+local MiscFrame = Instance.new("Frame")
+local InfoMisc = Instance.new("TextLabel")
+local InfCash = Instance.new("TextButton")
+local InfCashInfo = Instance.new("TextLabel")
+local Respawnn = Instance.new("ImageButton")
+local JoinCT = Instance.new("ImageButton")
+local JoinT = Instance.new("ImageButton")
+local Bridgard = Instance.new("ImageLabel")
+local InformationText = Instance.new("TextLabel")
+local CloseOptionsButton = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local BackgroundMain = Instance.new("ImageLabel")
+--Properties:
+YeetwareCBR.Name = "YeetwareCBR"
+YeetwareCBR.Parent = game.CoreGui
+YeetwareCBR.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Introduce.Name = "Introduce"
+Introduce.Parent = YeetwareCBR
+Introduce.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+Introduce.BorderColor3 = Color3.new(0.262745, 0.262745, 0.262745)
+Introduce.BorderSizePixel = 5
+Introduce.Position = UDim2.new(0.318650424, 0, 0.087649405, 0)
+Introduce.Size = UDim2.new(0, 492, 0, 365)
+Introduce.Visible = true
+
+IntroduceTitel.Name = "IntroduceTitel"
+IntroduceTitel.Parent = Introduce
+IntroduceTitel.BackgroundColor3 = Color3.new(1, 1, 1)
+IntroduceTitel.BackgroundTransparency = 1
+IntroduceTitel.BorderColor3 = Color3.new(0.262745, 0.262745, 0.262745)
+IntroduceTitel.BorderSizePixel = 3
+IntroduceTitel.Size = UDim2.new(0, 492, 0, 50)
+IntroduceTitel.Font = Enum.Font.GothamBlack
+IntroduceTitel.Text = "YEETWARE V3"
+IntroduceTitel.TextColor3 = Color3.new(1, 1, 1)
+IntroduceTitel.TextScaled = true
+IntroduceTitel.TextSize = 14
+IntroduceTitel.TextWrapped = true
+
+Updatenotes.Name = "Updatenotes"
+Updatenotes.Parent = Introduce
+Updatenotes.BackgroundColor3 = Color3.new(1, 1, 1)
+Updatenotes.BackgroundTransparency = 1
+Updatenotes.Position = UDim2.new(0, 0, 0.1369863, 0)
+Updatenotes.Size = UDim2.new(0, 492, 0, 253)
+Updatenotes.Font = Enum.Font.GothamBlack
+Updatenotes.Text = "Hello, we've updated Yeetware, we are calling Yeetware.gg now YEETWARE because, we are going to do alot of GUIS for Roblox-Games where its worth it. Don't forget YEETWARE.CBR (Counter Blox Remastered GUI) is getting still updated because it's the project that 4MGD , Quantrumium + (PRIVAT)   are working at. We will update Yeetware.CBR like often as we can, so we can improve Yeetware.CBR by the look , and the \"Quality\". 4MGD is working at the GUI/UI. Quantrumium is working at the Scripts which are used in the GUI. (PRIVAT) will help with the GUI. If you want to Support Yeetware/Skidware  for further Projects, feel free to donate us :) :- paypal.me/YEETWARE -:  Notes: We don't want to Profit out of skidded scripts. The Donations ain't needed, because; what  is really motivating team Yeetware to create GUIS is the Communtiy! anyways Enjoy using Yeetware.CBR V3 - 4MGD"
+Updatenotes.TextColor3 = Color3.new(1, 1, 1)
+Updatenotes.TextScaled = true
+Updatenotes.TextSize = 14
+Updatenotes.TextWrapped = true
+
+LoadToMain.Name = "LoadToMain"
+LoadToMain.Parent = Introduce
+LoadToMain.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+LoadToMain.BackgroundTransparency = 1
+LoadToMain.Position = UDim2.new(0.0121951215, 0, 0.830137014, 0)
+LoadToMain.Size = UDim2.new(0, 480, 0, 54)
+LoadToMain.Font = Enum.Font.GothamBlack
+LoadToMain.Text = "Load into YEETWARE.CBR"
+LoadToMain.TextColor3 = Color3.new(1, 1, 1)
+LoadToMain.TextScaled = true
+LoadToMain.TextSize = 14
+LoadToMain.TextWrapped = true
+LoadToMain.MouseButton1Down:connect(function()
+	Introduce.Visible = false
+	Main.Visible = true
+	BackgroundMain.Visible = true
+end)
+
+Main.Name = "Main"
+Main.Parent = YeetwareCBR
+Main.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+Main.BorderColor3 = Color3.new(0.262745, 0.262745, 0.262745)
+Main.BorderSizePixel = 5
+Main.Position = UDim2.new(0.308341146, 0, 0.0498007983, 0)
+Main.Size = UDim2.new(0, 550, 0, 450)
+Main.Visible = false
+Main.Draggable = true
+
+ButtonFrame.Name = "ButtonFrame"
+ButtonFrame.Parent = Main
+ButtonFrame.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+ButtonFrame.BorderColor3 = Color3.new(0.262745, 0.262745, 0.262745)
+ButtonFrame.BorderSizePixel = 5
+ButtonFrame.Position = UDim2.new(-0.330909103, 0, 0, 0)
+ButtonFrame.Size = UDim2.new(0, 176, 0, 450)
+
+LegitButton.Name = "LegitButton"
+LegitButton.Parent = ButtonFrame
+LegitButton.BackgroundColor3 = Color3.new(1, 1, 1)
+LegitButton.BackgroundTransparency = 1
+LegitButton.Position = UDim2.new(0, 0, 0.055555556, 0)
+LegitButton.Size = UDim2.new(0, 176, 0, 50)
+LegitButton.Font = Enum.Font.GothamBlack
+LegitButton.Text = "Legit"
+LegitButton.TextColor3 = Color3.new(1, 1, 1)
+LegitButton.TextSize = 35
+LegitButton.MouseButton1Down:connect(function()
+	BackgroundMain.Visible = false
+	LegitFrame.Visible = true
+	RageFrame.Visible = false
+	VisualFrame.Visible = false
+	MiscFrame.Visible = false
+end)
+
+LegitFrame.Name = "LegitFrame"
+LegitFrame.Parent = LegitButton
+LegitFrame.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+LegitFrame.BackgroundTransparency = 1
+LegitFrame.Position = UDim2.new(1.03409088, 0, 0.5, 0)
+LegitFrame.Size = UDim2.new(0, 550, 0, 400)
+LegitFrame.Visible = false
+
+LegitAimlock.Name = "LegitAimlock"
+LegitAimlock.Parent = LegitFrame
+LegitAimlock.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+LegitAimlock.BackgroundTransparency = 0.85000002384186
+LegitAimlock.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+LegitAimlock.BorderSizePixel = 0
+LegitAimlock.Position = UDim2.new(0.0338638574, 0, 0.0625, 0)
+LegitAimlock.Size = UDim2.new(0, 350, 0, 75)
+LegitAimlock.Font = Enum.Font.GothamBlack
+LegitAimlock.Text = "Legit Aimlock"
+LegitAimlock.TextColor3 = Color3.new(1, 1, 1)
+LegitAimlock.TextScaled = true
+LegitAimlock.TextSize = 14
+LegitAimlock.TextWrapped = true
+LegitAimlock.MouseButton1Down:connect(function()
+    PLAYER  = game.Players.LocalPlayer
+MOUSE   = PLAYER:GetMouse()
+CC      = game.Workspace.CurrentCamera
+
+_G.AIM_AT = 'UpperTorso'
+_G.BIND   = 101 -- E
+
+function GetNearestPlayerToMouse()
+    local PLAYERS      = {}
+    local PLAYER_HOLD  = {}
+    local DISTANCES    = {25}
+    for i, v in pairs(game.Players:GetPlayers()) do
+        if v ~= PLAYER then
+            table.insert(PLAYERS, v)
+        end
+    end
+    for i, v in pairs(PLAYERS) do
+            if v and (v.Character) ~= nil and v.Team ~= PLAYER.Team then
+                local AIM = v.Character:FindFirstChild(_G.AIM_AT)
+                if AIM ~= nil then
+                    local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
+                    local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
+                    local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
+                    local DIFF                     = math.floor((POS - AIM.Position).magnitude)
+                    PLAYER_HOLD[v.Name .. i]       = {}
+                    PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
+                    PLAYER_HOLD[v.Name .. i].plr   = v
+                    PLAYER_HOLD[v.Name .. i].diff  = DIFF
+                    table.insert(DISTANCES, DIFF)
+                end
+            end
+        end
+    
+    if unpack(DISTANCES) == nil then
+        return false
+    end
+    
+    local L_DISTANCE = math.floor(math.min(unpack(DISTANCES)))
+    if L_DISTANCE > 20 then
+        return false
+    end
+    
+    for i, v in pairs(PLAYER_HOLD) do
+        if v.diff == L_DISTANCE then
+            return v.plr
+        end
+    end
+    return false
+end
+
+MOUSE.KeyDown:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.BIND then
+        ENABLED = true
+    end
+end)
+
+MOUSE.KeyUp:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.BIND then
+        ENABLED = false
+    end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+    if ENABLED then
+        local TARGET = GetNearestPlayerToMouse()
+        if (TARGET ~= false) then
+            local AIM = TARGET.Character:FindFirstChild(_G.AIM_AT)
+            if AIM then
+                CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, AIM.CFrame.p)
+            end
+        end
+    end
+end)
+
+print("Legit-Aimlock loaded")
+end)
+
+InfoAim.Name = "InfoAim"
+InfoAim.Parent = LegitFrame
+InfoAim.BackgroundColor3 = Color3.new(1, 1, 1)
+InfoAim.BackgroundTransparency = 100
+InfoAim.Position = UDim2.new(0.0156820398, 0, 0.213555753, 0)
+InfoAim.Size = UDim2.new(0, 349, 0, 31)
+InfoAim.Font = Enum.Font.GothamBlack
+InfoAim.Text = "E  to Aimlock ;  Torso-Level"
+InfoAim.TextColor3 = Color3.new(1, 1, 1)
+InfoAim.TextSize = 14
+
+FadedLogo.Name = "FadedLogo"
+FadedLogo.Parent = LegitFrame
+FadedLogo.Active = true
+FadedLogo.BackgroundColor3 = Color3.new(1, 1, 1)
+FadedLogo.BackgroundTransparency = 1
+FadedLogo.Position = UDim2.new(0.769090891, 0, 0.0625, 0)
+FadedLogo.Size = UDim2.new(0, 100, 0, 100)
+FadedLogo.Image = "rbxassetid://3046512159"
+
+RageButton.Name = "RageButton"
+RageButton.Parent = ButtonFrame
+RageButton.BackgroundColor3 = Color3.new(1, 1, 1)
+RageButton.BackgroundTransparency = 1
+RageButton.Position = UDim2.new(0, 0, 0.222222224, 0)
+RageButton.Size = UDim2.new(0, 176, 0, 50)
+RageButton.Font = Enum.Font.GothamBlack
+RageButton.Text = "Rage"
+RageButton.TextColor3 = Color3.new(1, 1, 1)
+RageButton.TextSize = 35
+RageButton.MouseButton1Down:Connect(function()
+	BackgroundMain.Visible = false
+	LegitFrame.Visible = false
+	RageFrame.Visible = true
+	VisualFrame.Visible = false
+	MiscFrame.Visible = false
+end)
+
+RageFrame.Name = "RageFrame"
+RageFrame.Parent = RageButton
+RageFrame.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+RageFrame.BackgroundTransparency = 1
+RageFrame.Position = UDim2.new(1.03409088, 0, -1, 0)
+RageFrame.Size = UDim2.new(0, 550, 0, 400)
+RageFrame.Visible = false
+
+RageAimlock.Name = "RageAimlock"
+RageAimlock.Parent = RageFrame
+RageAimlock.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+RageAimlock.BackgroundTransparency = 0.85000002384186
+RageAimlock.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+RageAimlock.BorderSizePixel = 0
+RageAimlock.Position = UDim2.new(0.0340000018, 0, 0.061999999, 0)
+RageAimlock.Size = UDim2.new(0, 350, 0, 75)
+RageAimlock.Font = Enum.Font.GothamBlack
+RageAimlock.Text = "Rage Aimlock"
+RageAimlock.TextColor3 = Color3.new(1, 1, 1)
+RageAimlock.TextScaled = true
+RageAimlock.TextSize = 14
+RageAimlock.TextWrapped = true
+RageAimlock.MouseButton1Down:connect(function()
+    PLAYER  = game.Players.LocalPlayer
+MOUSE   = PLAYER:GetMouse()
+CC      = game.Workspace.CurrentCamera
+
+_G.AIM_AT = 'Head'
+_G.BIND   = 101 -- E
+
+function GetNearestPlayerToMouse()
+    local PLAYERS      = {}
+    local PLAYER_HOLD  = {}
+    local DISTANCES    = {25000}
+    for i, v in pairs(game.Players:GetPlayers()) do
+        if v ~= PLAYER then
+            table.insert(PLAYERS, v)
+        end
+    end
+    for i, v in pairs(PLAYERS) do
+            if v and (v.Character) ~= nil and v.Team ~= PLAYER.Team then
+                local AIM = v.Character:FindFirstChild(_G.AIM_AT)
+                if AIM ~= nil then
+                    local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
+                    local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
+                    local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
+                    local DIFF                     = math.floor((POS - AIM.Position).magnitude)
+                    PLAYER_HOLD[v.Name .. i]       = {}
+                    PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
+                    PLAYER_HOLD[v.Name .. i].plr   = v
+                    PLAYER_HOLD[v.Name .. i].diff  = DIFF
+                    table.insert(DISTANCES, DIFF)
+                end
+            end
+        end
+    
+    if unpack(DISTANCES) == nil then
+        return false
+    end
+    
+    local L_DISTANCE = math.floor(math.min(unpack(DISTANCES)))
+    if L_DISTANCE > 25000 then
+        return false
+    end
+    
+    for i, v in pairs(PLAYER_HOLD) do
+        if v.diff == L_DISTANCE then
+            return v.plr
+        end
+    end
+    return false
+end
+
+MOUSE.KeyDown:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.BIND then
+        ENABLED = true
+    end
+end)
+
+MOUSE.KeyUp:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.BIND then
+        ENABLED = false
+    end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+    if ENABLED then
+        local TARGET = GetNearestPlayerToMouse()
+        if (TARGET ~= false) then
+            local AIM = TARGET.Character:FindFirstChild(_G.AIM_AT)
+            if AIM then
+                CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, AIM.CFrame.p)
+            end
+        end
+    end
+end)
+
+print("Rage-Aimbot loaded")
+end)
+
+
+Spinbot.Name = "Spinbot"
+Spinbot.Parent = RageFrame
+Spinbot.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+Spinbot.BackgroundTransparency = 0.85000002384186
+Spinbot.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+Spinbot.Position = UDim2.new(0.038181819, 0, 0.375, 0)
+Spinbot.Size = UDim2.new(0, 350, 0, 75)
+Spinbot.Font = Enum.Font.GothamBlack
+Spinbot.Text = "Spinbot"
+Spinbot.TextColor3 = Color3.new(1, 1, 1)
+Spinbot.TextScaled = true
+Spinbot.TextSize = 14
+Spinbot.TextWrapped = true
+Spinbot.MouseButton1Down:connect(function()
+    if not antiaim
+    then
+        antiaim = true
+    else
+        antiaim = false
+        backward = false
+        jitter = false
+        yawfakelag = false
+        sideways = false
+        end
+end)
+Spinbot.MouseButton1Down:connect(function()
+if not pitchup
+then
+ pitchup = true
+repeat if pitchup then
+    wait()
+    game:GetService("ReplicatedStorage").Events.ControlTurn:FireServer("1")
+    end
+until pitchup == false
+else
+     pitchup = false
+end
+end)
+Spinbot.MouseButton1Down:connect(function()
+if not pitchdown
+then
+ pitchdown = true
+repeat if pitchdown then
+    wait()
+    game:GetService("ReplicatedStorage").Events.ControlTurn:FireServer("-1")
+    end
+until pitchdown == false
+else
+     pitchdown = false
+end
+end)
+Spinbot.MouseButton1Down:connect(function()
+if not pitchfakelag
+then
+ pitchfakelag = true
+repeat if pitchfakelag then
+    wait()
+    game:GetService("ReplicatedStorage").Events.ControlTurn:FireServer("1")
+    wait()
+    game:GetService("ReplicatedStorage").Events.ControlTurn:FireServer("-1")
+    end
+until pitchfakelag == false
+else
+     pitchfakelag = false
+end
+end)
+
+InfoSpinbot.Name = "InfoSpinbot"
+InfoSpinbot.Parent = RageFrame
+InfoSpinbot.BackgroundColor3 = Color3.new(1, 1, 1)
+InfoSpinbot.BackgroundTransparency = 100
+InfoSpinbot.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+InfoSpinbot.Position = UDim2.new(0.0379999876, 0, 0.561500013, 0)
+InfoSpinbot.Size = UDim2.new(0, 349, 0, 31)
+InfoSpinbot.Font = Enum.Font.GothamBlack
+InfoSpinbot.Text = "You need to press it 2x if it stopped spinning"
+InfoSpinbot.TextColor3 = Color3.new(1, 1, 1)
+InfoSpinbot.TextSize = 14
+
+InfoRAim.Name = "InfoRAim"
+InfoRAim.Parent = RageFrame
+InfoRAim.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+InfoRAim.BackgroundTransparency = 100
+InfoRAim.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+InfoRAim.Position = UDim2.new(0.0395456553, 0, 0.248555779, 0)
+InfoRAim.Size = UDim2.new(0, 349, 0, 31)
+InfoRAim.Font = Enum.Font.GothamBlack
+InfoRAim.Text = "E  to Aimlock ;  Head-Level"
+InfoRAim.TextColor3 = Color3.new(1, 1, 1)
+InfoRAim.TextSize = 14
+
+Headshotguarantee.Name = "Headshotguarantee"
+Headshotguarantee.Parent = RageFrame
+Headshotguarantee.BackgroundColor3 = Color3.new(1, 1, 1)
+Headshotguarantee.BackgroundTransparency = 3044833536
+Headshotguarantee.Position = UDim2.new(0.674545467, 0, -0.0250000004, 0)
+Headshotguarantee.Size = UDim2.new(0, 143, 0, 148)
+Headshotguarantee.Image = "rbxassetid://3044833513"
+
+Bruh.Name = "B ruh"
+Bruh.Parent = RageFrame
+Bruh.BackgroundColor3 = Color3.new(1, 1, 1)
+Bruh.BackgroundTransparency = 1
+Bruh.Position = UDim2.new(0.727272749, 0, 0.387499988, 0)
+Bruh.Size = UDim2.new(0, 100, 0, 100)
+Bruh.Image = "rbxassetid://3044443917"
+
+VisualButton.Name = "VisualButton"
+VisualButton.Parent = ButtonFrame
+VisualButton.BackgroundColor3 = Color3.new(1, 1, 1)
+VisualButton.BackgroundTransparency = 1
+VisualButton.Position = UDim2.new(0, 0, 0.388888896, 0)
+VisualButton.Size = UDim2.new(0, 176, 0, 50)
+VisualButton.Font = Enum.Font.GothamBlack
+VisualButton.Text = "Visual"
+VisualButton.TextColor3 = Color3.new(1, 1, 1)
+VisualButton.TextSize = 35
+VisualButton.MouseButton1Down:connect(function()
+	BackgroundMain.Visible = false
+	LegitFrame.Visible = false
+	RageFrame.Visible = false
+	VisualFrame.Visible = true
+	MiscFrame.Visible = false
+end)
+
+VisualFrame.Name = "VisualFrame"
+VisualFrame.Parent = VisualButton
+VisualFrame.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+VisualFrame.BackgroundTransparency = 1
+VisualFrame.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+VisualFrame.Position = UDim2.new(1.03409088, 0, -2.5, 0)
+VisualFrame.Size = UDim2.new(0, 550, 0, 400)
+VisualFrame.Visible = false
+
+ESP.Name = "ESP"
+ESP.Parent = VisualFrame
+ESP.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+ESP.BackgroundTransparency = 0.85000002384186
+ESP.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+ESP.Position = UDim2.new(0.0340000018, 0, 0.061999999, 0)
+ESP.Size = UDim2.new(0, 350, 0, 75)
+ESP.Font = Enum.Font.GothamBlack
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.new(1, 1, 1)
+ESP.TextScaled = true
+ESP.TextSize = 14
+ESP.TextWrapped = true
+
+ESPInfo.Name = "ESPInfo"
+ESPInfo.Parent = VisualFrame
+ESPInfo.BackgroundColor3 = Color3.new(1, 1, 1)
+ESPInfo.BackgroundTransparency = 100
+ESPInfo.Position = UDim2.new(0.0395456553, 0, 0.248555779, 0)
+ESPInfo.Size = UDim2.new(0, 349, 0, 31)
+ESPInfo.Font = Enum.Font.GothamBlack
+ESPInfo.Text = "if you dont see Body, active Legit-Aimlock"
+ESPInfo.TextColor3 = Color3.new(1, 1, 1)
+ESPInfo.TextSize = 14
+
+AntiFlash.Name = "AntiFlash"
+AntiFlash.Parent = VisualFrame
+AntiFlash.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+AntiFlash.BackgroundTransparency = 0.85000002384186
+AntiFlash.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+AntiFlash.Position = UDim2.new(0.0379999988, 0, 0.375, 0)
+AntiFlash.Size = UDim2.new(0, 350, 0, 76)
+AntiFlash.Font = Enum.Font.GothamBlack
+AntiFlash.Text = "Disable Flashbang"
+AntiFlash.TextColor3 = Color3.new(1, 1, 1)
+AntiFlash.TextScaled = true
+AntiFlash.TextSize = 14
+AntiFlash.TextWrapped = true
+AntiFlash.MouseButton1Down:connect(function()
+game:GetService("ReplicatedStorage").Events.Flash:Destroy()
+end)
+
+AntiFlashInfo.Name = "AntiFlashInfo"
+AntiFlashInfo.Parent = VisualFrame
+AntiFlashInfo.BackgroundColor3 = Color3.new(1, 1, 1)
+AntiFlashInfo.BackgroundTransparency = 100
+AntiFlashInfo.Position = UDim2.new(0.0379999876, 0, 0.561500013, 0)
+AntiFlashInfo.Size = UDim2.new(0, 349, 0, 31)
+AntiFlashInfo.Font = Enum.Font.GothamBlack
+AntiFlashInfo.Text = "You need to press it 2x if it stopped spinning"
+AntiFlashInfo.TextColor3 = Color3.new(1, 1, 1)
+AntiFlashInfo.TextSize = 14
+
+TextButton.Parent = VisualFrame
+TextButton.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+TextButton.BackgroundTransparency = 0.85000002384186
+TextButton.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+TextButton.Position = UDim2.new(0.0363636389, 0, 0.699999988, 0)
+TextButton.Size = UDim2.new(0, 349, 0, 75)
+TextButton.Font = Enum.Font.GothamBlack
+TextButton.Text = "Thirdperson"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+    if not thirdperson
+    then
+        thirdperson = true
+    repeat if thirdperson then
+	wait()
+    game.Players.LocalPlayer.CameraMaxZoomDistance = 15
+    game.Players.LocalPlayer.CameraMinZoomDistance = 15
+    game.Players.LocalPlayer.CameraMode = "Classic"
+    game.Workspace.Camera.Arms.IDFArms:Destroy()
+    end 
+    until thirdperson == false
+    else
+        thirdperson = false
+        end
+end)
+
+ThirdPersonInfo.Name = "ThirdPersonInfo"
+ThirdPersonInfo.Parent = VisualFrame
+ThirdPersonInfo.BackgroundColor3 = Color3.new(1, 1, 1)
+ThirdPersonInfo.BackgroundTransparency = 100
+ThirdPersonInfo.Position = UDim2.new(0.0361818075, 0, 0.886500001, 0)
+ThirdPersonInfo.Size = UDim2.new(0, 349, 0, 31)
+ThirdPersonInfo.Font = Enum.Font.GothamBlack
+ThirdPersonInfo.Text = "You need to press it2x if you're out of Thirdperson"
+ThirdPersonInfo.TextColor3 = Color3.new(1, 1, 1)
+ThirdPersonInfo.TextSize = 14
+
+ESPpic.Name = "ESPpic"
+ESPpic.Parent = VisualFrame
+ESPpic.BackgroundColor3 = Color3.new(1, 1, 1)
+ESPpic.BackgroundTransparency = 1
+ESPpic.Position = UDim2.new(0.721818209, 0, 0.0599999987, 0)
+ESPpic.Size = UDim2.new(0, 100, 0, 100)
+ESPpic.Image = "rbxassetid://3044474560"
+
+Lunarph.Name = "Lunarph"
+Lunarph.Parent = VisualFrame
+Lunarph.BackgroundColor3 = Color3.new(1, 1, 1)
+Lunarph.BackgroundTransparency = 1
+Lunarph.Position = UDim2.new(0.721818209, 0, 0.387499988, 0)
+Lunarph.Size = UDim2.new(0, 100, 0, 100)
+Lunarph.Image = "rbxassetid://3044587621"
+
+Yeahidk.Name = "Yeahidk"
+Yeahidk.Parent = VisualFrame
+Yeahidk.BackgroundColor3 = Color3.new(1, 1, 1)
+Yeahidk.BackgroundTransparency = 1
+Yeahidk.Position = UDim2.new(0.721818149, 0, 0.712499976, 0)
+Yeahidk.Size = UDim2.new(0, 100, 0, 100)
+Yeahidk.Image = "rbxassetid://3044443917"
+
+MiscButton.Name = "MiscButton"
+MiscButton.Parent = ButtonFrame
+MiscButton.BackgroundColor3 = Color3.new(1, 1, 1)
+MiscButton.BackgroundTransparency = 1
+MiscButton.Position = UDim2.new(0, 0, 0.557777822, 0)
+MiscButton.Size = UDim2.new(0, 176, 0, 50)
+MiscButton.Font = Enum.Font.GothamBlack
+MiscButton.Text = "Misc"
+MiscButton.TextColor3 = Color3.new(1, 1, 1)
+MiscButton.TextSize = 35
+MiscButton.MouseButton1Down:connect(function()
+	BackgroundMain.Visible = false
+	LegitFrame.Visible = false
+	RageFrame.Visible = false
+	VisualFrame.Visible = false
+	MiscFrame.Visible = true
+end)
+
+MiscFrame.Name = "MiscFrame"
+MiscFrame.Parent = MiscButton
+MiscFrame.BackgroundColor3 = Color3.new(0.564706, 0, 0.00784314)
+MiscFrame.BackgroundTransparency = 1
+MiscFrame.Position = UDim2.new(1.03409088, 0, -4.01999998, 0)
+MiscFrame.Size = UDim2.new(0, 550, 0, 400)
+MiscFrame.Visible = false
+
+InfoMisc.Name = "InfoMisc"
+InfoMisc.Parent = MiscFrame
+InfoMisc.BackgroundColor3 = Color3.new(1, 1, 1)
+InfoMisc.BackgroundTransparency = 1
+InfoMisc.Position = UDim2.new(0.130909085, 0, 0.25, 0)
+InfoMisc.Size = UDim2.new(0, 431, 0, 28)
+InfoMisc.Font = Enum.Font.GothamBlack
+InfoMisc.Text = "Respawn + Join a Team"
+InfoMisc.TextColor3 = Color3.new(1, 1, 1)
+InfoMisc.TextScaled = true
+InfoMisc.TextSize = 14
+InfoMisc.TextWrapped = true
+
+InfCash.Name = "InfCash"
+InfCash.Parent = MiscFrame
+InfCash.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+InfCash.BackgroundTransparency = 0.85000002384186
+InfCash.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+InfCash.Position = UDim2.new(0.0290909093, 0, 0.627499998, 0)
+InfCash.Size = UDim2.new(0, 350, 0, 75)
+InfCash.Font = Enum.Font.GothamBlack
+InfCash.Text = "Inf Cash"
+InfCash.TextColor3 = Color3.new(1, 1, 1)
+InfCash.TextScaled = true
+InfCash.TextSize = 14
+InfCash.TextWrapped = true
+InfCash.MouseButton1Down:connect(function()
+	local ao=game.Players.LocalPlayer.Cash;if ao then if ao.Value<=25000-2500 then repeat ao.Value=ao.Value+2500;wait(1/10)until ao.Value>=25000 end;ao.Value=25000 end
+end)
+
+
+InfCashInfo.Name = "InfCashInfo"
+InfCashInfo.Parent = MiscFrame
+InfCashInfo.BackgroundColor3 = Color3.new(1, 1, 1)
+InfCashInfo.BackgroundTransparency = 100
+InfCashInfo.Position = UDim2.new(0.0307272617, 0, 0.81400001, 0)
+InfCashInfo.Size = UDim2.new(0, 349, 0, 31)
+InfCashInfo.Font = Enum.Font.GothamBlack
+InfCashInfo.Text = "Only to buy Guns, Repress after Round"
+InfCashInfo.TextColor3 = Color3.new(1, 1, 1)
+InfCashInfo.TextSize = 14
+
+Respawnn.Name = "Respawnn"
+Respawnn.Parent = MiscFrame
+Respawnn.BackgroundColor3 = Color3.new(1, 1, 1)
+Respawnn.BackgroundTransparency = 1
+Respawnn.Position = UDim2.new(0.436363637, 0, -1.49011612e-08, 0)
+Respawnn.Size = UDim2.new(0, 100, 0, 100)
+Respawnn.Image = "rbxassetid://3044514611"
+Respawnn.MouseButton1Down:connect(function()
+    game.ReplicatedStorage.Events:FindFirstChild("Spawnme"):FireServer()
+end)
+
+JoinCT.Name = "JoinCT"
+JoinCT.Parent = MiscFrame
+JoinCT.BackgroundColor3 = Color3.new(1, 1, 1)
+JoinCT.BackgroundTransparency = 1
+JoinCT.Position = UDim2.new(0.1309091, 0, 0, 0)
+JoinCT.Size = UDim2.new(0, 100, 0, 100)
+JoinCT.Image = "rbxassetid://3044519986"
+JoinCT.MouseButton1Down:connect(function()
+    game.ReplicatedStorage.Events:FindFirstChild("JoinTeam"):FireServer("CT")
+end)
+
+JoinT.Name = "JoinT"
+JoinT.Parent = MiscFrame
+JoinT.BackgroundColor3 = Color3.new(1, 1, 1)
+JoinT.BackgroundTransparency = 1
+JoinT.LayoutOrder = -1
+JoinT.Position = UDim2.new(0.732727289, 0, -0.00249999994, 0)
+JoinT.Size = UDim2.new(0, 100, 0, 100)
+JoinT.Image = "rbxassetid://3044523126"
+JoinT.MouseButton1Down:Connect(function()
+    game.ReplicatedStorage.Events:FindFirstChild("JoinTeam"):FireServer("T")
+end)
+
+Bridgard.Name = "Bridgard"
+Bridgard.Parent = MiscFrame
+Bridgard.BackgroundColor3 = Color3.new(1, 1, 1)
+Bridgard.BackgroundTransparency = 1
+Bridgard.Position = UDim2.new(0.692727208, 0, 0.622500002, 0)
+Bridgard.Size = UDim2.new(0, 100, 0, 100)
+Bridgard.Image = "rbxassetid://3044586715"
+
+InformationText.Name = "InformationText"
+InformationText.Parent = ButtonFrame
+InformationText.BackgroundColor3 = Color3.new(1, 1, 1)
+InformationText.BackgroundTransparency = 1
+InformationText.Position = UDim2.new(0, 0, 0.695555508, 0)
+InformationText.Size = UDim2.new(0, 176, 0, 73)
+InformationText.Font = Enum.Font.GothamBlack
+InformationText.Text = "You can open the GUI by pressing  RightShift"
+InformationText.TextColor3 = Color3.new(1, 1, 1)
+InformationText.TextScaled = true
+InformationText.TextSize = 34
+InformationText.TextWrapped = true
+
+CloseOptionsButton.Name = "CloseOptionsButton"
+CloseOptionsButton.Parent = ButtonFrame
+CloseOptionsButton.BackgroundColor3 = Color3.new(1, 1, 1)
+CloseOptionsButton.BackgroundTransparency = 1
+CloseOptionsButton.Position = UDim2.new(0, 0, 0.873333335, 0)
+CloseOptionsButton.Size = UDim2.new(0, 176, 0, 50)
+CloseOptionsButton.Font = Enum.Font.GothamBlack
+CloseOptionsButton.Text = "Close Options"
+CloseOptionsButton.TextColor3 = Color3.new(1, 1, 1)
+CloseOptionsButton.TextScaled = true
+CloseOptionsButton.TextSize = 35
+CloseOptionsButton.TextWrapped = true
+CloseOptionsButton.MouseButton1Down:Connect(function()
+	BackgroundMain.Visible = true
+	LegitFrame.Visible = false
+	RageFrame.Visible = false
+	VisualFrame.Visible = false
+	MiscFrame.Visible = false
+end)
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.new(1, 1, 1)
+Title.BackgroundTransparency = 1
+Title.Size = UDim2.new(0, 550, 0, 50)
+Title.Font = Enum.Font.GothamBlack
+Title.Text = "YEETWARE.CBR VERSION 3"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+Title.TextSize = 14
+Title.TextWrapped = true
+
+BackgroundMain.Name = "BackgroundMain"
+BackgroundMain.Parent = Main
+BackgroundMain.BackgroundColor3 = Color3.new(1, 1, 1)
+BackgroundMain.BackgroundTransparency = 1
+BackgroundMain.Position = UDim2.new(0.13636364, 0, 0.111111112, 0)
+BackgroundMain.Size = UDim2.new(0, 400, 0, 400)
+BackgroundMain.Image = "rbxassetid://3044555051"
+-- Scripts:
+LegitAimlock.MouseButton1Click:Connect(function()
+    pcall(function()
+local espcolor                  = Color3.fromRGB(255, 0, 0)
+local wallhack_esp_transparency = .4
+local gui_hide_button           = {Enum.KeyCode.LeftControl, ""}
+local plrs                      = game:GetService("Players")
+local lplr                      = game:GetService("Players").LocalPlayer
+local TeamBased                 = true ; local teambasedswitch = ""
+local presskeytoaim             = true; local aimkey = ""
+aimbothider                     = false; aimbothiderspeed = 1
+local Aim_Assist                = false ; Aim_Assist_Key = {Enum.KeyCode.LeftControl, ""}
+local espupdatetime             = 5; autoesp = true; local charmsesp = true
+local movementcounting          = true
+
+
+
+
+local mouselock = false
+local canaimat = true
+local lockaim = true; local lockangle = 5
+local ver = "0.2.7"
+local cam = game.Workspace.CurrentCamera
+local BetterDeathCount = true
+local ballisticsboost = 0
+
+local mouse = lplr:GetMouse()
+local switch = false
+local key = "k"
+local aimatpart = nil
+local lightesp = false
+
+local abs = math.abs
+
+local Gui = Instance.new("ScreenGui")
+local Move = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local EspStatus = Instance.new("TextLabel")
+local st1 = Instance.new("TextLabel")
+local st1_2 = Instance.new("TextLabel")
+local st1_3 = Instance.new("TextBox")
+local Name = Instance.new("TextLabel")
+--Properties:
+
+Gui.Parent = plrs.LocalPlayer:WaitForChild("PlayerGui")
+
+
+local aimbotstatus = {"qc", "qr", "qe", "qd", "qi", "qt", "qs", "dd", "sp", "ql", "qa", "qd", "qs"}
+local gotstring = 0
+local function getrandomstring()
+	gotstring = gotstring+666
+	local str = ""
+	local randomstring = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "g", "k", "l", "m", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+		 "а","б","в","г","д","е","ё","ж","з","и","й","к","л","м","о","п","р","с","т","у","ф","х","ч","щ","ъ","ы","ъ","э","ю","я", "`", "$", 
+		"0","1","2","3","4","5","6","7","8","9", }
+	local counting123 = 0
+	for i, v in ipairs(randomstring) do
+		counting123 = i
+	end
+	do
+        math.randomseed(tick()+gotstring)
+        for i = 3, math.random(1,100) do
+                math.randomseed(i+tick()+gotstring)
+                
+                local oneortwo = math.random(1,2)
+                if oneortwo == 2 then
+                    math.randomseed(i+tick()+gotstring)
+                    str = str..""..randomstring[math.random(1, counting123)]
+                else
+                    math.randomseed(i+tick()+gotstring)
+                    str = str..""..string.upper(randomstring[math.random(1, counting123)])
+                end
+            
+        end
+    end
+    return str
+end
+local mousedown = false
+local isonmovething = false
+local mouseoffset = Vector2.new()
+local mousedown = false
+local bspeed = 3584
+local aimbotoffset = {dd = ":", sp = " ", qa = "a", qb = "b",qc = "c", qd = "d", qe = "e", qf = "f", qg = "g" , qh = "h" , qi = "i", qj = "j", qk = "k", ql = "l", qm = "m", qn = "n", qo = "o", qp = "p", qq = "q", qr = "r", qs = "s", qt = "t", qu = "u", qv = "w", qx = "x", qy = "y", qz = "z"}
+
+
+
+Gui.Name = getrandomstring()
+
+Move.Name                   = getrandomstring()
+Move.Draggable              = true
+Move.Parent                 = Gui
+Move.BackgroundColor3       = Color3.new(0.0431373, 1, 0.0745098)
+Move.BackgroundTransparency = 0.40000000596046
+Move.BorderSizePixel        = 0
+Move.Position               = UDim2.new(0.5, 0,0.018, 0)
+Move.Size                   = UDim2.new(0, 0, 0, 0)
+
+Move.MouseEnter:Connect(function()
+    
+    isonmovething = true
+    
+end)
+Move.MouseLeave:Connect(function()
+    
+    isonmovething = mousedown and true or false
+end)
+mouse.Button1Down:connect(function()
+    mousedown = true
+    mouseoffset = Move.AbsolutePosition - Vector2.new(mouse.X, mouse.Y)
+end)
+mouse.Button1Up:connect(function()
+    mousedown = false
+end)
+
+mouse.Move:Connect(function()
+    if isonmovething == true and mousedown then
+        Move.Position = UDim2.new(0, mouseoffset.X + mouse.X, 0, mouseoffset.Y + mouse.Y)
+    end
+end)
+local function uc (st)
+    local ast = ""
+    for i, v in ipairs(st) do
+        local let = aimbotoffset[v]
+        ast = ast..let
+    end
+    return ast
+end
+
+Main.Name                   = getrandomstring()
+Main.Parent                 = Move
+Main.BackgroundColor3       = Color3.new(0.176471, 0.176471, 0.176471)
+Main.BackgroundTransparency = 0.69999998807907
+Main.Position               = UDim2.new(0, 0, 0.995670795, 0)
+Main.Size                   = UDim2.new(0, 0, 0, 0)
+
+st1.Name = getrandomstring()
+st1.Parent = Main
+st1.BackgroundColor3 = Color3.new(1, 1, 1)
+st1.BackgroundTransparency = 1
+st1.Position = UDim2.new(0, 0, 0, 0)
+st1.Size = UDim2.new(1, 0, 0.161862016, 0)
+st1.Font = Enum.Font.ArialBold
+st1.Text = uc(aimbotstatus)
+st1.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+st1.TextScaled = true
+st1.TextSize = 14
+st1.TextWrapped = true
+
+st1_2.Name = getrandomstring()
+st1_2.Parent = Main
+st1_2.BackgroundColor3 = Color3.new(1, 1, 1)
+st1_2.BackgroundTransparency = 1
+st1_2.Position = UDim2.new(0, 0, 0.375590861, 0)
+st1_2.Size = UDim2.new(0.999999881, 0, 0.161862016, 0)
+st1_2.Font = Enum.Font.ArialBold
+st1_2.TextXAlignment = Enum.TextXAlignment.Left
+st1_2.Text = "Current ballistics: 0"
+st1_2.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+st1_2.TextScaled = true
+st1_2.TextSize = 14
+st1_2.TextWrapped = true
+
+local aimbothiderbox = Instance.new("TextBox")
+aimbothiderbox.Name = getrandomstring()
+aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+aimbothiderbox.Size = UDim2.new(1, 0,0.162, 0)
+aimbothiderbox.TextScaled = true
+aimbothiderbox.TextColor3 =Color3.fromRGB(255, 0, 0)
+aimbothiderbox.Position = UDim2.new(0, 0,0.853, 0)
+aimbothiderbox.BackgroundTransparency = 1
+aimbothiderbox.Parent = Main
+
+st1_3.Name = getrandomstring()
+st1_3.Parent = Main
+st1_3.BackgroundColor3 = Color3.new(1, 1, 1)
+st1_3.BackgroundTransparency = 1
+st1_3.Position = UDim2.new(0, 0, 0.18558608, 0)
+st1_3.Size = UDim2.new(0.999999881, 0, 0.161862016, 0)
+st1_3.Font = Enum.Font.ArialBold
+st1_3.Text = "Bullet speed = 3584"
+st1_3.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+st1_3.TextScaled = true
+st1_3.TextSize = 14
+st1_3.TextWrapped = true
+local teambasedstatus = st1_3:Clone()
+teambasedstatus.Parent = Main
+teambasedstatus.TextScaled = true
+teambasedstatus.Position = UDim2.new(0, 0,.7, 0)
+teambasedstatus.Size = UDim2.new(1, 0,.1, 0)
+teambasedstatus.Name = getrandomstring()
+teambasedstatus.Text = "Team Based: "..tostring(TeamBased)
+local espstatustext = teambasedstatus:Clone()
+espstatustext.Name = getrandomstring()
+espstatustext.Position = UDim2.new(0, 0,0.58, 0)
+espstatustext.Text = "Esp loop :"..tostring(autoesp)
+espstatustext.Parent = Main
+local hide = Instance.new("TextButton")
+hide.Text = "_"
+hide.BackgroundTransparency = 1
+hide.TextScaled = true
+hide.TextWrapped = true
+hide.Size = UDim2.new(0.1, 0,1, 0)
+hide.Position = UDim2.new(0.9, 0,-0.15, 0)
+hide.Name = getrandomstring()
+hide.Parent = Move
+Name.Name = getrandomstring()
+Name.Parent = Move
+Name.BackgroundColor3 = Color3.new(1, 1, 1)
+Name.BackgroundTransparency = 1
+Name.Size = UDim2.new(0.838, 0, 1, 0)
+Name.Font = Enum.Font.Arial
+Name.Text = "FPS MultiHack v"..ver
+Name.TextColor3 = Color3.new(0, 0, 0)
+Name.TextScaled = true
+Name.TextSize = 14
+Name.TextWrapped = true
+Name.TextXAlignment = Enum.TextXAlignment.Left
+local scr = Instance.new("ScrollingFrame")
+scr.Size = Main.Size
+scr.Position = Main.Position
+scr.ScrollBarThickness = 0
+scr.BackgroundTransparency = 1
+scr.Name = getrandomstring()
+Main.Size = UDim2.new(1, 0, 1, 0)
+Main.Position = UDim2.new(0,0,0,0)
+Main.Parent = scr
+scr.Parent = Move
+startpos = Main.Position
+Move.Active = true
+
+-- Scripts:
+hided = false
+hide.MouseButton1Click:Connect(function()
+    if hided == false then
+        hided = true
+        Main:TweenPosition(UDim2.new(0, 0, -1.5, 0))
+    else
+        hided = false
+        Main:TweenPosition(startpos)
+    end
+end)
+
+
+aimbothiderbox.FocusLost:Connect(function()
+    local numb = tonumber(aimbothiderbox.Text)
+    if aimbothider == true then
+        aimbothiderbox.TextColor3 =Color3.fromRGB(11, 255, 19)
+    else
+        aimbothiderbox.TextColor3 =Color3.fromRGB(255, 0, 0)
+    end
+    if numb ~= nil then
+        aimbothiderspeed = numb
+        if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+    else
+        if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+    end
+end)
+
+
+local plrsforaim = {}
+
+
+Move.Draggable = true
+Gui.ResetOnSpawn = false
+--Gui.Name = "Chat"
+Gui.DisplayOrder = 999
+pcall(function()
+if not game:GetService("CoreGui") then
+    Gui.Parent = plrs.LocalPlayer.PlayerGui
+else
+    Gui.Parent = game:GetService("CoreGui")
+end
+end)
+local espheadthing
+do
+local BillboardGui = Instance.new("BillboardGui")
+local PName = Instance.new("TextLabel")
+local Pdist = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+--Properties:
+--BillboardGui.Parent = game.Workspace.Part
+BillboardGui.ZIndexBehavior  = Enum.ZIndexBehavior.Sibling
+BillboardGui.AlwaysOnTop     = true
+BillboardGui.LightInfluence  = 0
+BillboardGui.Size            = UDim2.new(0, 0, 0, 0)
+BillboardGui.Name            = "headoverthing"
+PName.Name                   = "PName"
+PName.Parent                 = BillboardGui
+PName.BackgroundColor3       = espcolor
+PName.BackgroundTransparency = 0.55000001192093
+PName.BorderSizePixel        = 0
+PName.Size                   = UDim2.new(0, 100, 0, 23)
+PName.Font                   = Enum.Font.SourceSans
+PName.Text                   = "urmom"
+PName.TextColor3             = Color3.new(0, 0, 0)
+PName.TextScaled             = true
+PName.TextSize               = 14
+PName.TextWrapped            = true
+st1.Text                     = uc(aimbotstatus)
+Pdist.Name                   = "Pdist"
+Pdist.Parent                 = BillboardGui
+Pdist.AnchorPoint            = Vector2.new(0.5, 0)
+Pdist.BackgroundColor3       = espcolor
+Pdist.BackgroundTransparency = 0.55000001192093
+Pdist.BorderSizePixel        = 0
+Pdist.Position               = UDim2.new(0.5, 0, 0.5, 0)
+Pdist.Size                   = UDim2.new(0, 70, 0, 23)
+Pdist.Font                   = Enum.Font.SourceSans
+Pdist.Text                   = "666"
+Pdist.TextColor3             = Color3.new(0, 0, 0)
+Pdist.TextScaled             = true
+Pdist.TextSize               = 14
+Pdist.TextWrapped            = true
+
+ImageLabel.Parent = BillboardGui
+ImageLabel.BackgroundColor3 = Color3.new(0.298039, 1, 0)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderColor3 = espcolor
+ImageLabel.Position = UDim2.new(1, -15, 0.5, 0)
+ImageLabel.Rotation = 180
+ImageLabel.Size = UDim2.new(0, 15, 0, 23)
+ImageLabel.Image = "rbxassetid://2832171824"
+ImageLabel.ImageColor3 = espcolor
+ImageLabel.ImageTransparency = 0.55000001192093
+
+ImageLabel_2.Parent = BillboardGui
+ImageLabel_2.BackgroundColor3 = espcolor
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.BorderColor3 = Color3.new(0.298039, 1, 0)
+ImageLabel_2.Position = UDim2.new(0, 0, 0.5, 0)
+ImageLabel_2.Rotation = 180
+ImageLabel_2.Size = UDim2.new(0, 15, 0, 23)
+ImageLabel_2.Image = "rbxassetid://2832177613"
+ImageLabel_2.ImageColor3 = espcolor
+ImageLabel_2.ImageTransparency = 0.55000001192093
+espheadthing = BillboardGui
+end
+
+
+
+f = {}
+f.UpdateHeadUI = function(v)
+    
+        
+            if v.Adornee and v.Adornee ~= nil then
+                local destr = false
+                if TeamBased then
+                    destr = true
+                    local plr = plrs:GetPlayerFromCharacter(v.Adornee.Parent)
+                    if plr and plr.Team and plr.Team.Name ~= lplr.Team.Name then
+                        destr = false
+                    end
+                end
+                if lightesp == true then
+                    v.Pdist.TextColor3 = Color3.new(1,1,1)
+                    v.PName.TextColor3 = Color3.new(1,1,1)
+                else
+                    v.Pdist.TextColor3 = Color3.new(0,0,0)
+                    v.PName.TextColor3 = Color3.new(0,0,0)
+                end
+                local d = math.floor((cam.CFrame.p - v.Adornee.CFrame.p).magnitude)
+                v.Pdist.Text = tostring(d)
+                if d < 14 then
+                    v.Enabled = false
+                else
+                    v.Enabled = true
+                end
+                v.StudsOffset = Vector3.new(0,.6+d/14,0)
+                if destr then
+                    v:Destroy()
+                end
+            else
+                v:Destroy()
+            end
+        
+    
+end
+st1.Text = uc(aimbotstatus)
+local espforlder
+local partconverter = Instance.new("Part")
+--local headsupdatelist = {}
+st1_3.FocusLost:connect(function()
+    if tonumber(st1_3.Text) then
+        bspeed = tonumber(st1_3.Text)
+    else
+        
+    end
+end)
+f.addesp = function()
+    pcall(function()
+    --print("ESP ran")
+    if espforlder then
+        espforlder:Destroy()
+        espforlder = Instance.new("Folder")
+        espforlder.Parent = game.Workspace.CurrentCamera
+    else
+        espforlder = Instance.new("Folder")
+        espforlder.Parent = game.Workspace.CurrentCamera
+    end
+    for i, v in pairs(espforlder:GetChildren()) do
+        v:Destroy()
+    end
+    for _, plr in pairs(plrs:GetChildren()) do
+        if plr.Character and plr.Character.Humanoid.Health > 0 and plr.Name ~= lplr.Name then
+            if TeamBased == true then
+                
+                if plr.Team.Name ~= plrs.LocalPlayer.Team.Name  then
+                    pcall(function()
+                    local e = espforlder:FindFirstChild(plr.Name)
+                    if not e then
+                        local fold = Instance.new("Folder", espforlder)
+                        fold.Name = plr.Name
+                        
+                        --partconverter.BrickColor = plr.Team.Color
+                        --local teamc = partconverter.Color
+                        for i, p in pairs(plr.Character:GetChildren()) do
+                            if p:IsA("BasePart") and p.Name ~= "HumanoidRootPart" then
+                                if charmsesp then
+                                local urmom = Instance.new("BoxHandleAdornment")
+                                urmom.ZIndex = 10
+                                urmom.AlwaysOnTop = true
+                                urmom.Color3 = espcolor
+                                urmom.Size = p.Size
+                                urmom.Adornee = p
+                                urmom.Name = tick().." Ur mom has big gay"
+                                urmom.Transparency = wallhack_esp_transparency
+                                urmom.Parent = fold
+                                if p.Name == "Head" then
+                                    local th = p:FindFirstChild("headoverthing")
+                                    if not th then
+                                        local ht = espheadthing:Clone()
+                                        ht.PName.Text = p.Parent.Name
+                                        ht.Adornee = p
+                                        --table.insert(headsupdatelist, ht)
+                                        delay(0, function()
+                                            while wait(0.08) and plr and p do
+                                                f.UpdateHeadUI(ht)
+                                            end
+                                        end)
+                                        ht.Parent = p
+                                    end
+                                end
+                                end
+                            end
+                        end
+                        plr.Character.Humanoid.Died:Connect(function()
+                            fold:Destroy()
+                        end)
+                        
+                    end
+                    end)
+                end
+            else
+                local e = espforlder:FindFirstChild(plr.Name)
+                if not e then
+                    local fold = Instance.new("Folder", espforlder)
+                        fold.Name = plr.Name
+                        
+                        --partconverter.BrickColor = plr.Team.Color
+                        --local teamc = Move.BackgroundColor3
+                        for i, p in pairs(plr.Character:GetChildren()) do
+                            if p:IsA("BasePart") and p.Name ~= "HumanoidRootPart" then
+                                pcall(function()
+                                if charmsesp then
+                                local urmom = Instance.new("BoxHandleAdornment")
+                                urmom.ZIndex = 10
+                                urmom.AlwaysOnTop = true
+                                urmom.Color3 = espcolor
+                                urmom.Size = p.Size
+                                urmom.Adornee = p
+                                urmom.Name = tick().." Ur mom has big gay"
+                                urmom.Transparency = wallhack_esp_transparency
+                                urmom.Parent = fold
+                                end
+                                if p.Name == "Head" then
+                                    local th = p:FindFirstChild("headoverthing")
+                                    if not th then
+                                        local ht = espheadthing:Clone()
+                                        ht.PName.Text = p.Parent.Name
+                                        ht.Adornee = p
+                                        delay(0, function()
+                                            while wait(0.08) and plr and p do
+                                                f.UpdateHeadUI(ht)
+                                            end
+                                        end)
+                                        --table.insert(headsupdatelist, ht)
+                                        ht.Parent = p
+                                    end
+                                end
+                                end)
+                            end
+                        end
+                        plr.Character.Humanoid.Died:Connect(function()
+                            fold:Destroy()
+                        end)
+                end
+            end
+            
+            
+        end
+    end
+    end)
+end
+
+local uis = game:GetService("UserInputService")
+local bringall = false
+local hided2 = false
+local upping = false
+local downing = false
+mouse.KeyDown:Connect(function(a)
+    
+    if a == "t" then
+        --print("worked1")
+        f.addesp()
+    elseif a == gui_hide_button[2] and uis:IsKeyDown(gui_hide_button[1]) then
+        if hided2 == false then
+            hided2 = true
+            autoesp =false
+            if espforlder then
+                espforlder:Destroy()
+            end
+            Gui.Enabled = false
+        else
+            Gui.Enabled = true
+            hided2 = false
+        end
+            
+    elseif a == "y" then
+        if aimbothider == false then
+            aimbothider = true
+            if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+        else
+            
+            aimbothider = false
+            if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+        end
+        if aimbothider == true then
+            aimbothiderbox.TextColor3 =Color3.fromRGB(11, 255, 19)
+        else
+            aimbothiderbox.TextColor3 =Color3.fromRGB(255, 0, 0)
+        end
+    elseif a == "l" then
+        if not uis:IsKeyDown(Enum.KeyCode.LeftControl) then
+            if autoesp == false then
+                autoesp = true
+            else
+                autoesp = false
+            end
+        else
+            if lightesp == true then
+                lightesp = false
+            else
+                lightesp = true
+            end
+        end
+    elseif a == "]" then
+        upping = true
+        downing = false
+    elseif a== "[" then
+        downing = true
+        upping = false
+    elseif a == Aim_Assist_Key[2] and uis:IsKeyDown(Aim_Assist_Key[1]) then
+        if Aim_Assist == true then
+            Aim_Assist = false
+            --print("disabled")
+        else
+            Aim_Assist = true
+        end
+    end
+    if a == "j" then
+        if mouse.Target then
+            mouse.Target:Destroy()
+        end
+    end
+    if a == key then
+        if switch == false then
+            switch = true
+        else
+            switch = false
+            if aimatpart ~= nil then
+                aimatpart = nil
+            end
+        end
+    elseif a == "b" and uis:IsKeyDown(Enum.KeyCode.LeftControl) and not uis:IsKeyDown(Enum.KeyCode.R) then
+        if movementcounting then
+            movementcounting = false
+        else
+            movementcounting = true
+        end
+    elseif a == teambasedswitch then
+        if TeamBased == true then
+            TeamBased = false
+            teambasedstatus.Text = "Team Based: "..tostring(TeamBased)
+        else
+            TeamBased = true
+            teambasedstatus.Text = "Team Based: "..tostring(TeamBased)
+        end
+    elseif a == "b" and uis:IsKeyDown(Enum.KeyCode.LeftControl) and uis:IsKeyDown(Enum.KeyCode.R) then
+        ballisticsboost = 0
+    elseif a == aimkey then
+        if not aimatpart then
+            local maxangle = math.rad(20)
+            for i, plr in pairs(plrs:GetChildren()) do
+                if plr.Name ~= lplr.Name and plr.Character and plr.Character.Head and plr.Character.Humanoid and plr.Character.Humanoid.Health > 1 then
+                    if TeamBased == true then
+                        if plr.Team.Name ~= lplr.Team.Name then
+                            local an = checkfov(plr.Character.Head)
+                            if an < maxangle then
+                                maxangle = an
+                                aimatpart = plr.Character.Head
+                            end
+                        end
+                    else
+                        local an = checkfov(plr.Character.Head)
+                            if an < maxangle then
+                                maxangle = an
+                                aimatpart = plr.Character.Head
+                            end
+                            --print(plr)
+                    end
+                    local old = aimatpart
+                    plr.Character.Humanoid.Died:Connect(function()
+                        --print("died")
+                        if aimatpart and aimatpart == old then
+                            aimatpart = nil
+                        end
+                    end)
+                    
+                end
+            end
+        else
+            aimatpart = nil
+            canaimat = false
+            delay(1.1, function()
+                canaimat = true
+            end)
+        end
+    end
+end)
+
+function getfovxyz (p0, p1, deg)
+    local x1, y1, z1 = p0:ToOrientation()
+    local cf = CFrame.new(p0.p, p1.p)
+    local x2, y2, z2 = cf:ToOrientation()
+    local d = math.deg
+    if deg then
+        return Vector3.new(d(x1-x2), d(y1-y2), d(z1-z2))
+    else
+        return Vector3.new((x1-x2), (y1-y2), (z1-z2))
+    end
+end
+
+
+function aimat(part)
+    if part then
+        --print(part)
+        local d = (cam.CFrame.p - part.CFrame.p).magnitude
+        local calculatedrop
+        local timetoaim = 0
+        local pos2 = Vector3.new()
+        if movementcounting == true then
+            timetoaim = d/bspeed
+            pos2 = part.Velocity * timetoaim
+        end
+        local minuseddrop = (ballisticsboost+50)/50
+        if ballisticsboost ~= 0 then
+            calculatedrop = d - (d/minuseddrop)
+            
+        else
+            calculatedrop = 0
+        end
+        --print(calculatedrop)
+        local addative = Vector3.new()
+        if movementcounting then
+            addative = pos2
+        end
+        local cf = CFrame.new(cam.CFrame.p, (addative + part.CFrame.p+ Vector3.new(0, calculatedrop, 0)))
+        if aimbothider == true or Aim_Assist == true then
+            cam.CFrame = cam.CFrame:Lerp(cf, aimbothiderspeed)
+        else
+            
+            cam.CFrame = cf
+        end
+        --print(cf)
+    end
+end
+function checkfov (part)
+    local fov = getfovxyz(game.Workspace.CurrentCamera.CFrame, part.CFrame)
+    local angle = math.abs(fov.X) + math.abs(fov.Y)
+    return angle
+end
+pcall(function()
+    delay(0, function()
+        while wait(.32) do
+            if Aim_Assist and not aimatpart and canaimat and lplr.Character and lplr.Character.Humanoid and lplr.Character.Humanoid.Health > 0 then
+                for i, plr in pairs(plrs:GetChildren()) do
+                    
+                    
+                        local minangle = math.rad(5.5)
+                        local lastpart = nil
+                        local function gg(plr)
+                            pcall(function()
+                            if plr.Name ~= lplr.Name and plr.Character and plr.Character.Humanoid and plr.Character.Humanoid.Health > 0 and plr.Character.Head then
+                                local raycasted = false
+                                local cf1 = CFrame.new(cam.CFrame.p, plr.Character.Head.CFrame.p) * CFrame.new(0, 0, -4)
+                                local r1 = Ray.new(cf1.p, cf1.LookVector * 9000)
+                                local obj, pos = game.Workspace:FindPartOnRayWithIgnoreList(r1,  {lplr.Character.Head})
+                                local dist = (plr.Character.Head.CFrame.p- pos).magnitude
+                                if dist < 4 then
+                                    raycasted = true
+                                end
+                                if raycasted == true then
+                                    local an1 = getfovxyz(cam.CFrame, plr.Character.Head.CFrame)
+                                    local an = abs(an1.X) + abs(an1.Y)
+                                    if an < minangle then
+                                        minangle = an
+                                        lastpart = plr.Character.Head
+                                    end
+                                end
+                            end
+                            end)
+                        end
+                        if TeamBased then
+                            if plr.Team.Name ~= lplr.Team.Name then
+                                gg(plr)
+                            end
+                        else
+                            gg(plr)
+                        end
+                        --print(math.deg(minangle))
+                        if lastpart then
+                            aimatpart = lastpart
+                            aimatpart.Parent.Humanoid.Died:Connect(function()
+                                if aimatpart == lastpart then
+                                    aimatpart = nil
+                                end
+                            end)
+                        
+                    end
+                end
+            end
+        end
+    end)
+end)
+local oldheadpos
+local lastaimapart
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+    if uis:IsKeyDown(Enum.KeyCode.RightBracket) or uis:IsKeyDown(Enum.KeyCode.LeftBracket) then
+        if upping then
+            ballisticsboost = ballisticsboost + dt/1.9
+        elseif downing then
+            ballisticsboost = ballisticsboost - dt/1.9
+        end
+    end
+    if movementcounting then
+        st1_2.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+        st1_2.Text = "Current ballistics: "..tostring(math.floor(ballisticsboost*10)/10)
+    else
+        st1_2.TextColor3 = Color3.new(1,0,0)
+    end
+    espstatustext.Text = "Esp loop :"..tostring(autoesp)
+    if aimatpart and lplr.Character and lplr.Character.Head then
+        if BetterDeathCount and lastaimapart and lastaimapart == aimatpart then
+            local dist = (oldheadpos - aimatpart.CFrame.p).magnitude
+            if dist > 40 then
+                aimatpart = nil
+            end
+        end
+        lastaimapart = aimatpart
+        oldheadpos = lastaimapart.CFrame.p
+        do 
+            if aimatpart.Parent == plrs.LocalPlayer.Character then
+                aimatpart = nil
+            end
+            aimat(aimatpart)
+            pcall(function()
+                if Aim_Assist == true then
+                    local cf1 = CFrame.new(cam.CFrame.p, aimatpart.CFrame.p) * CFrame.new(0, 0, -4)
+                    local r1 = Ray.new(cf1.p, cf1.LookVector * 1000)
+                    local obj, pos = game.Workspace:FindPartOnRayWithIgnoreList(r1,  {lplr.Character.Head})
+                    local dist = (aimatpart.CFrame.p- pos).magnitude
+                    if obj then
+                        --print(obj:GetFullName())
+                    end
+                    if not obj or dist > 6 then
+                        aimatpart = nil
+                        --print("ooof")
+                    end
+                    canaimat = false
+                    delay(.5, function()
+                        canaimat = true
+                    end)
+                end
+            end)
+        end
+        
+        
+        
+    end
+end)
+
+
+delay(0, function()
+    while wait(espupdatetime) do
+        if autoesp == true then
+            pcall(function()
+            f.addesp()
+            end)
+        end
+    end
+end)
+warn("loaded")
+end)
+end)
+
+RageAimlock.MouseButton1Click:Connect(function()
+    pcall(function()
+local espcolor                  = Color3.fromRGB(255, 0, 0)
+local wallhack_esp_transparency = .4
+local gui_hide_button           = {Enum.KeyCode.LeftControl, ""}
+local plrs                      = game:GetService("Players")
+local lplr                      = game:GetService("Players").LocalPlayer
+local TeamBased                 = true ; local teambasedswitch = ""
+local presskeytoaim             = true; local aimkey = ""
+aimbothider                     = false; aimbothiderspeed = 1
+local Aim_Assist                = false ; Aim_Assist_Key = {Enum.KeyCode.LeftControl, ""}
+local espupdatetime             = 5; autoesp = true; local charmsesp = true
+local movementcounting          = true
+
+
+
+
+local mouselock = false
+local canaimat = true
+local lockaim = true; local lockangle = 5
+local ver = "0.2.7"
+local cam = game.Workspace.CurrentCamera
+local BetterDeathCount = true
+local ballisticsboost = 0
+
+local mouse = lplr:GetMouse()
+local switch = false
+local key = "k"
+local aimatpart = nil
+local lightesp = false
+
+local abs = math.abs
+
+local Gui = Instance.new("ScreenGui")
+local Move = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local EspStatus = Instance.new("TextLabel")
+local st1 = Instance.new("TextLabel")
+local st1_2 = Instance.new("TextLabel")
+local st1_3 = Instance.new("TextBox")
+local Name = Instance.new("TextLabel")
+--Properties:
+
+Gui.Parent = plrs.LocalPlayer:WaitForChild("PlayerGui")
+
+
+local aimbotstatus = {"qc", "qr", "qe", "qd", "qi", "qt", "qs", "dd", "sp", "ql", "qa", "qd", "qs"}
+local gotstring = 0
+local function getrandomstring()
+	gotstring = gotstring+666
+	local str = ""
+	local randomstring = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "g", "k", "l", "m", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+		 "а","б","в","г","д","е","ё","ж","з","и","й","к","л","м","о","п","р","с","т","у","ф","х","ч","щ","ъ","ы","ъ","э","ю","я", "`", "$", 
+		"0","1","2","3","4","5","6","7","8","9", }
+	local counting123 = 0
+	for i, v in ipairs(randomstring) do
+		counting123 = i
+	end
+	do
+        math.randomseed(tick()+gotstring)
+        for i = 3, math.random(1,100) do
+                math.randomseed(i+tick()+gotstring)
+                
+                local oneortwo = math.random(1,2)
+                if oneortwo == 2 then
+                    math.randomseed(i+tick()+gotstring)
+                    str = str..""..randomstring[math.random(1, counting123)]
+                else
+                    math.randomseed(i+tick()+gotstring)
+                    str = str..""..string.upper(randomstring[math.random(1, counting123)])
+                end
+            
+        end
+    end
+    return str
+end
+local mousedown = false
+local isonmovething = false
+local mouseoffset = Vector2.new()
+local mousedown = false
+local bspeed = 3584
+local aimbotoffset = {dd = ":", sp = " ", qa = "a", qb = "b",qc = "c", qd = "d", qe = "e", qf = "f", qg = "g" , qh = "h" , qi = "i", qj = "j", qk = "k", ql = "l", qm = "m", qn = "n", qo = "o", qp = "p", qq = "q", qr = "r", qs = "s", qt = "t", qu = "u", qv = "w", qx = "x", qy = "y", qz = "z"}
+
+
+
+Gui.Name = getrandomstring()
+
+Move.Name                   = getrandomstring()
+Move.Draggable              = true
+Move.Parent                 = Gui
+Move.BackgroundColor3       = Color3.new(0.0431373, 1, 0.0745098)
+Move.BackgroundTransparency = 0.40000000596046
+Move.BorderSizePixel        = 0
+Move.Position               = UDim2.new(0.5, 0,0.018, 0)
+Move.Size                   = UDim2.new(0, 0, 0, 0)
+
+Move.MouseEnter:Connect(function()
+    
+    isonmovething = true
+    
+end)
+Move.MouseLeave:Connect(function()
+    
+    isonmovething = mousedown and true or false
+end)
+mouse.Button1Down:connect(function()
+    mousedown = true
+    mouseoffset = Move.AbsolutePosition - Vector2.new(mouse.X, mouse.Y)
+end)
+mouse.Button1Up:connect(function()
+    mousedown = false
+end)
+
+mouse.Move:Connect(function()
+    if isonmovething == true and mousedown then
+        Move.Position = UDim2.new(0, mouseoffset.X + mouse.X, 0, mouseoffset.Y + mouse.Y)
+    end
+end)
+local function uc (st)
+    local ast = ""
+    for i, v in ipairs(st) do
+        local let = aimbotoffset[v]
+        ast = ast..let
+    end
+    return ast
+end
+
+Main.Name                   = getrandomstring()
+Main.Parent                 = Move
+Main.BackgroundColor3       = Color3.new(0.176471, 0.176471, 0.176471)
+Main.BackgroundTransparency = 0.69999998807907
+Main.Position               = UDim2.new(0, 0, 0.995670795, 0)
+Main.Size                   = UDim2.new(0, 0, 0, 0)
+
+st1.Name = getrandomstring()
+st1.Parent = Main
+st1.BackgroundColor3 = Color3.new(1, 1, 1)
+st1.BackgroundTransparency = 1
+st1.Position = UDim2.new(0, 0, 0, 0)
+st1.Size = UDim2.new(1, 0, 0.161862016, 0)
+st1.Font = Enum.Font.ArialBold
+st1.Text = uc(aimbotstatus)
+st1.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+st1.TextScaled = true
+st1.TextSize = 14
+st1.TextWrapped = true
+
+st1_2.Name = getrandomstring()
+st1_2.Parent = Main
+st1_2.BackgroundColor3 = Color3.new(1, 1, 1)
+st1_2.BackgroundTransparency = 1
+st1_2.Position = UDim2.new(0, 0, 0.375590861, 0)
+st1_2.Size = UDim2.new(0.999999881, 0, 0.161862016, 0)
+st1_2.Font = Enum.Font.ArialBold
+st1_2.TextXAlignment = Enum.TextXAlignment.Left
+st1_2.Text = "Current ballistics: 0"
+st1_2.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+st1_2.TextScaled = true
+st1_2.TextSize = 14
+st1_2.TextWrapped = true
+
+local aimbothiderbox = Instance.new("TextBox")
+aimbothiderbox.Name = getrandomstring()
+aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+aimbothiderbox.Size = UDim2.new(1, 0,0.162, 0)
+aimbothiderbox.TextScaled = true
+aimbothiderbox.TextColor3 =Color3.fromRGB(255, 0, 0)
+aimbothiderbox.Position = UDim2.new(0, 0,0.853, 0)
+aimbothiderbox.BackgroundTransparency = 1
+aimbothiderbox.Parent = Main
+
+st1_3.Name = getrandomstring()
+st1_3.Parent = Main
+st1_3.BackgroundColor3 = Color3.new(1, 1, 1)
+st1_3.BackgroundTransparency = 1
+st1_3.Position = UDim2.new(0, 0, 0.18558608, 0)
+st1_3.Size = UDim2.new(0.999999881, 0, 0.161862016, 0)
+st1_3.Font = Enum.Font.ArialBold
+st1_3.Text = "Bullet speed = 3584"
+st1_3.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+st1_3.TextScaled = true
+st1_3.TextSize = 14
+st1_3.TextWrapped = true
+local teambasedstatus = st1_3:Clone()
+teambasedstatus.Parent = Main
+teambasedstatus.TextScaled = true
+teambasedstatus.Position = UDim2.new(0, 0,.7, 0)
+teambasedstatus.Size = UDim2.new(1, 0,.1, 0)
+teambasedstatus.Name = getrandomstring()
+teambasedstatus.Text = "Team Based: "..tostring(TeamBased)
+local espstatustext = teambasedstatus:Clone()
+espstatustext.Name = getrandomstring()
+espstatustext.Position = UDim2.new(0, 0,0.58, 0)
+espstatustext.Text = "Esp loop :"..tostring(autoesp)
+espstatustext.Parent = Main
+local hide = Instance.new("TextButton")
+hide.Text = "_"
+hide.BackgroundTransparency = 1
+hide.TextScaled = true
+hide.TextWrapped = true
+hide.Size = UDim2.new(0.1, 0,1, 0)
+hide.Position = UDim2.new(0.9, 0,-0.15, 0)
+hide.Name = getrandomstring()
+hide.Parent = Move
+Name.Name = getrandomstring()
+Name.Parent = Move
+Name.BackgroundColor3 = Color3.new(1, 1, 1)
+Name.BackgroundTransparency = 1
+Name.Size = UDim2.new(0.838, 0, 1, 0)
+Name.Font = Enum.Font.Arial
+Name.Text = "FPS MultiHack v"..ver
+Name.TextColor3 = Color3.new(0, 0, 0)
+Name.TextScaled = true
+Name.TextSize = 14
+Name.TextWrapped = true
+Name.TextXAlignment = Enum.TextXAlignment.Left
+local scr = Instance.new("ScrollingFrame")
+scr.Size = Main.Size
+scr.Position = Main.Position
+scr.ScrollBarThickness = 0
+scr.BackgroundTransparency = 1
+scr.Name = getrandomstring()
+Main.Size = UDim2.new(1, 0, 1, 0)
+Main.Position = UDim2.new(0,0,0,0)
+Main.Parent = scr
+scr.Parent = Move
+startpos = Main.Position
+Move.Active = true
+
+-- Scripts:
+hided = false
+hide.MouseButton1Click:Connect(function()
+    if hided == false then
+        hided = true
+        Main:TweenPosition(UDim2.new(0, 0, -1.5, 0))
+    else
+        hided = false
+        Main:TweenPosition(startpos)
+    end
+end)
+
+
+aimbothiderbox.FocusLost:Connect(function()
+    local numb = tonumber(aimbothiderbox.Text)
+    if aimbothider == true then
+        aimbothiderbox.TextColor3 =Color3.fromRGB(11, 255, 19)
+    else
+        aimbothiderbox.TextColor3 =Color3.fromRGB(255, 0, 0)
+    end
+    if numb ~= nil then
+        aimbothiderspeed = numb
+        if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+    else
+        if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+    end
+end)
+
+
+local plrsforaim = {}
+
+
+Move.Draggable = true
+Gui.ResetOnSpawn = false
+--Gui.Name = "Chat"
+Gui.DisplayOrder = 999
+pcall(function()
+if not game:GetService("CoreGui") then
+    Gui.Parent = plrs.LocalPlayer.PlayerGui
+else
+    Gui.Parent = game:GetService("CoreGui")
+end
+end)
+local espheadthing
+do
+local BillboardGui = Instance.new("BillboardGui")
+local PName = Instance.new("TextLabel")
+local Pdist = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+--Properties:
+--BillboardGui.Parent = game.Workspace.Part
+BillboardGui.ZIndexBehavior  = Enum.ZIndexBehavior.Sibling
+BillboardGui.AlwaysOnTop     = true
+BillboardGui.LightInfluence  = 0
+BillboardGui.Size            = UDim2.new(0, 0, 0, 0)
+BillboardGui.Name            = "headoverthing"
+PName.Name                   = "PName"
+PName.Parent                 = BillboardGui
+PName.BackgroundColor3       = espcolor
+PName.BackgroundTransparency = 0.55000001192093
+PName.BorderSizePixel        = 0
+PName.Size                   = UDim2.new(0, 100, 0, 23)
+PName.Font                   = Enum.Font.SourceSans
+PName.Text                   = "urmom"
+PName.TextColor3             = Color3.new(0, 0, 0)
+PName.TextScaled             = true
+PName.TextSize               = 14
+PName.TextWrapped            = true
+st1.Text                     = uc(aimbotstatus)
+Pdist.Name                   = "Pdist"
+Pdist.Parent                 = BillboardGui
+Pdist.AnchorPoint            = Vector2.new(0.5, 0)
+Pdist.BackgroundColor3       = espcolor
+Pdist.BackgroundTransparency = 0.55000001192093
+Pdist.BorderSizePixel        = 0
+Pdist.Position               = UDim2.new(0.5, 0, 0.5, 0)
+Pdist.Size                   = UDim2.new(0, 70, 0, 23)
+Pdist.Font                   = Enum.Font.SourceSans
+Pdist.Text                   = "666"
+Pdist.TextColor3             = Color3.new(0, 0, 0)
+Pdist.TextScaled             = true
+Pdist.TextSize               = 14
+Pdist.TextWrapped            = true
+
+ImageLabel.Parent = BillboardGui
+ImageLabel.BackgroundColor3 = Color3.new(0.298039, 1, 0)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderColor3 = espcolor
+ImageLabel.Position = UDim2.new(1, -15, 0.5, 0)
+ImageLabel.Rotation = 180
+ImageLabel.Size = UDim2.new(0, 15, 0, 23)
+ImageLabel.Image = "rbxassetid://2832171824"
+ImageLabel.ImageColor3 = espcolor
+ImageLabel.ImageTransparency = 0.55000001192093
+
+ImageLabel_2.Parent = BillboardGui
+ImageLabel_2.BackgroundColor3 = espcolor
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.BorderColor3 = Color3.new(0.298039, 1, 0)
+ImageLabel_2.Position = UDim2.new(0, 0, 0.5, 0)
+ImageLabel_2.Rotation = 180
+ImageLabel_2.Size = UDim2.new(0, 15, 0, 23)
+ImageLabel_2.Image = "rbxassetid://2832177613"
+ImageLabel_2.ImageColor3 = espcolor
+ImageLabel_2.ImageTransparency = 0.55000001192093
+espheadthing = BillboardGui
+end
+
+
+
+f = {}
+f.UpdateHeadUI = function(v)
+    
+        
+            if v.Adornee and v.Adornee ~= nil then
+                local destr = false
+                if TeamBased then
+                    destr = true
+                    local plr = plrs:GetPlayerFromCharacter(v.Adornee.Parent)
+                    if plr and plr.Team and plr.Team.Name ~= lplr.Team.Name then
+                        destr = false
+                    end
+                end
+                if lightesp == true then
+                    v.Pdist.TextColor3 = Color3.new(1,1,1)
+                    v.PName.TextColor3 = Color3.new(1,1,1)
+                else
+                    v.Pdist.TextColor3 = Color3.new(0,0,0)
+                    v.PName.TextColor3 = Color3.new(0,0,0)
+                end
+                local d = math.floor((cam.CFrame.p - v.Adornee.CFrame.p).magnitude)
+                v.Pdist.Text = tostring(d)
+                if d < 14 then
+                    v.Enabled = false
+                else
+                    v.Enabled = true
+                end
+                v.StudsOffset = Vector3.new(0,.6+d/14,0)
+                if destr then
+                    v:Destroy()
+                end
+            else
+                v:Destroy()
+            end
+        
+    
+end
+st1.Text = uc(aimbotstatus)
+local espforlder
+local partconverter = Instance.new("Part")
+--local headsupdatelist = {}
+st1_3.FocusLost:connect(function()
+    if tonumber(st1_3.Text) then
+        bspeed = tonumber(st1_3.Text)
+    else
+        
+    end
+end)
+f.addesp = function()
+    pcall(function()
+    --print("ESP ran")
+    if espforlder then
+        espforlder:Destroy()
+        espforlder = Instance.new("Folder")
+        espforlder.Parent = game.Workspace.CurrentCamera
+    else
+        espforlder = Instance.new("Folder")
+        espforlder.Parent = game.Workspace.CurrentCamera
+    end
+    for i, v in pairs(espforlder:GetChildren()) do
+        v:Destroy()
+    end
+    for _, plr in pairs(plrs:GetChildren()) do
+        if plr.Character and plr.Character.Humanoid.Health > 0 and plr.Name ~= lplr.Name then
+            if TeamBased == true then
+                
+                if plr.Team.Name ~= plrs.LocalPlayer.Team.Name  then
+                    pcall(function()
+                    local e = espforlder:FindFirstChild(plr.Name)
+                    if not e then
+                        local fold = Instance.new("Folder", espforlder)
+                        fold.Name = plr.Name
+                        
+                        --partconverter.BrickColor = plr.Team.Color
+                        --local teamc = partconverter.Color
+                        for i, p in pairs(plr.Character:GetChildren()) do
+                            if p:IsA("BasePart") and p.Name ~= "HumanoidRootPart" then
+                                if charmsesp then
+                                local urmom = Instance.new("BoxHandleAdornment")
+                                urmom.ZIndex = 10
+                                urmom.AlwaysOnTop = true
+                                urmom.Color3 = espcolor
+                                urmom.Size = p.Size
+                                urmom.Adornee = p
+                                urmom.Name = tick().." Ur mom has big gay"
+                                urmom.Transparency = wallhack_esp_transparency
+                                urmom.Parent = fold
+                                if p.Name == "Head" then
+                                    local th = p:FindFirstChild("headoverthing")
+                                    if not th then
+                                        local ht = espheadthing:Clone()
+                                        ht.PName.Text = p.Parent.Name
+                                        ht.Adornee = p
+                                        --table.insert(headsupdatelist, ht)
+                                        delay(0, function()
+                                            while wait(0.08) and plr and p do
+                                                f.UpdateHeadUI(ht)
+                                            end
+                                        end)
+                                        ht.Parent = p
+                                    end
+                                end
+                                end
+                            end
+                        end
+                        plr.Character.Humanoid.Died:Connect(function()
+                            fold:Destroy()
+                        end)
+                        
+                    end
+                    end)
+                end
+            else
+                local e = espforlder:FindFirstChild(plr.Name)
+                if not e then
+                    local fold = Instance.new("Folder", espforlder)
+                        fold.Name = plr.Name
+                        
+                        --partconverter.BrickColor = plr.Team.Color
+                        --local teamc = Move.BackgroundColor3
+                        for i, p in pairs(plr.Character:GetChildren()) do
+                            if p:IsA("BasePart") and p.Name ~= "HumanoidRootPart" then
+                                pcall(function()
+                                if charmsesp then
+                                local urmom = Instance.new("BoxHandleAdornment")
+                                urmom.ZIndex = 10
+                                urmom.AlwaysOnTop = true
+                                urmom.Color3 = espcolor
+                                urmom.Size = p.Size
+                                urmom.Adornee = p
+                                urmom.Name = tick().." Ur mom has big gay"
+                                urmom.Transparency = wallhack_esp_transparency
+                                urmom.Parent = fold
+                                end
+                                if p.Name == "Head" then
+                                    local th = p:FindFirstChild("headoverthing")
+                                    if not th then
+                                        local ht = espheadthing:Clone()
+                                        ht.PName.Text = p.Parent.Name
+                                        ht.Adornee = p
+                                        delay(0, function()
+                                            while wait(0.08) and plr and p do
+                                                f.UpdateHeadUI(ht)
+                                            end
+                                        end)
+                                        --table.insert(headsupdatelist, ht)
+                                        ht.Parent = p
+                                    end
+                                end
+                                end)
+                            end
+                        end
+                        plr.Character.Humanoid.Died:Connect(function()
+                            fold:Destroy()
+                        end)
+                end
+            end
+            
+            
+        end
+    end
+    end)
+end
+
+local uis = game:GetService("UserInputService")
+local bringall = false
+local hided2 = false
+local upping = false
+local downing = false
+mouse.KeyDown:Connect(function(a)
+    
+    if a == "t" then
+        --print("worked1")
+        f.addesp()
+    elseif a == gui_hide_button[2] and uis:IsKeyDown(gui_hide_button[1]) then
+        if hided2 == false then
+            hided2 = true
+            autoesp =false
+            if espforlder then
+                espforlder:Destroy()
+            end
+            Gui.Enabled = false
+        else
+            Gui.Enabled = true
+            hided2 = false
+        end
+            
+    elseif a == "y" then
+        if aimbothider == false then
+            aimbothider = true
+            if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+        else
+            
+            aimbothider = false
+            if aimbothider == true then
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+        else
+            aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+        end
+        end
+        if aimbothider == true then
+            aimbothiderbox.TextColor3 =Color3.fromRGB(11, 255, 19)
+        else
+            aimbothiderbox.TextColor3 =Color3.fromRGB(255, 0, 0)
+        end
+    elseif a == "l" then
+        if not uis:IsKeyDown(Enum.KeyCode.LeftControl) then
+            if autoesp == false then
+                autoesp = true
+            else
+                autoesp = false
+            end
+        else
+            if lightesp == true then
+                lightesp = false
+            else
+                lightesp = true
+            end
+        end
+    elseif a == "]" then
+        upping = true
+        downing = false
+    elseif a== "[" then
+        downing = true
+        upping = false
+    elseif a == Aim_Assist_Key[2] and uis:IsKeyDown(Aim_Assist_Key[1]) then
+        if Aim_Assist == true then
+            Aim_Assist = false
+            --print("disabled")
+        else
+            Aim_Assist = true
+        end
+    end
+    if a == "j" then
+        if mouse.Target then
+            mouse.Target:Destroy()
+        end
+    end
+    if a == key then
+        if switch == false then
+            switch = true
+        else
+            switch = false
+            if aimatpart ~= nil then
+                aimatpart = nil
+            end
+        end
+    elseif a == "b" and uis:IsKeyDown(Enum.KeyCode.LeftControl) and not uis:IsKeyDown(Enum.KeyCode.R) then
+        if movementcounting then
+            movementcounting = false
+        else
+            movementcounting = true
+        end
+    elseif a == teambasedswitch then
+        if TeamBased == true then
+            TeamBased = false
+            teambasedstatus.Text = "Team Based: "..tostring(TeamBased)
+        else
+            TeamBased = true
+            teambasedstatus.Text = "Team Based: "..tostring(TeamBased)
+        end
+    elseif a == "b" and uis:IsKeyDown(Enum.KeyCode.LeftControl) and uis:IsKeyDown(Enum.KeyCode.R) then
+        ballisticsboost = 0
+    elseif a == aimkey then
+        if not aimatpart then
+            local maxangle = math.rad(20)
+            for i, plr in pairs(plrs:GetChildren()) do
+                if plr.Name ~= lplr.Name and plr.Character and plr.Character.Head and plr.Character.Humanoid and plr.Character.Humanoid.Health > 1 then
+                    if TeamBased == true then
+                        if plr.Team.Name ~= lplr.Team.Name then
+                            local an = checkfov(plr.Character.Head)
+                            if an < maxangle then
+                                maxangle = an
+                                aimatpart = plr.Character.Head
+                            end
+                        end
+                    else
+                        local an = checkfov(plr.Character.Head)
+                            if an < maxangle then
+                                maxangle = an
+                                aimatpart = plr.Character.Head
+                            end
+                            --print(plr)
+                    end
+                    local old = aimatpart
+                    plr.Character.Humanoid.Died:Connect(function()
+                        --print("died")
+                        if aimatpart and aimatpart == old then
+                            aimatpart = nil
+                        end
+                    end)
+                    
+                end
+            end
+        else
+            aimatpart = nil
+            canaimat = false
+            delay(1.1, function()
+                canaimat = true
+            end)
+        end
+    end
+end)
+
+function getfovxyz (p0, p1, deg)
+    local x1, y1, z1 = p0:ToOrientation()
+    local cf = CFrame.new(p0.p, p1.p)
+    local x2, y2, z2 = cf:ToOrientation()
+    local d = math.deg
+    if deg then
+        return Vector3.new(d(x1-x2), d(y1-y2), d(z1-z2))
+    else
+        return Vector3.new((x1-x2), (y1-y2), (z1-z2))
+    end
+end
+
+
+function aimat(part)
+    if part then
+        --print(part)
+        local d = (cam.CFrame.p - part.CFrame.p).magnitude
+        local calculatedrop
+        local timetoaim = 0
+        local pos2 = Vector3.new()
+        if movementcounting == true then
+            timetoaim = d/bspeed
+            pos2 = part.Velocity * timetoaim
+        end
+        local minuseddrop = (ballisticsboost+50)/50
+        if ballisticsboost ~= 0 then
+            calculatedrop = d - (d/minuseddrop)
+            
+        else
+            calculatedrop = 0
+        end
+        --print(calculatedrop)
+        local addative = Vector3.new()
+        if movementcounting then
+            addative = pos2
+        end
+        local cf = CFrame.new(cam.CFrame.p, (addative + part.CFrame.p+ Vector3.new(0, calculatedrop, 0)))
+        if aimbothider == true or Aim_Assist == true then
+            cam.CFrame = cam.CFrame:Lerp(cf, aimbothiderspeed)
+        else
+            
+            cam.CFrame = cf
+        end
+        --print(cf)
+    end
+end
+function checkfov (part)
+    local fov = getfovxyz(game.Workspace.CurrentCamera.CFrame, part.CFrame)
+    local angle = math.abs(fov.X) + math.abs(fov.Y)
+    return angle
+end
+pcall(function()
+    delay(0, function()
+        while wait(.32) do
+            if Aim_Assist and not aimatpart and canaimat and lplr.Character and lplr.Character.Humanoid and lplr.Character.Humanoid.Health > 0 then
+                for i, plr in pairs(plrs:GetChildren()) do
+                    
+                    
+                        local minangle = math.rad(5.5)
+                        local lastpart = nil
+                        local function gg(plr)
+                            pcall(function()
+                            if plr.Name ~= lplr.Name and plr.Character and plr.Character.Humanoid and plr.Character.Humanoid.Health > 0 and plr.Character.Head then
+                                local raycasted = false
+                                local cf1 = CFrame.new(cam.CFrame.p, plr.Character.Head.CFrame.p) * CFrame.new(0, 0, -4)
+                                local r1 = Ray.new(cf1.p, cf1.LookVector * 9000)
+                                local obj, pos = game.Workspace:FindPartOnRayWithIgnoreList(r1,  {lplr.Character.Head})
+                                local dist = (plr.Character.Head.CFrame.p- pos).magnitude
+                                if dist < 4 then
+                                    raycasted = true
+                                end
+                                if raycasted == true then
+                                    local an1 = getfovxyz(cam.CFrame, plr.Character.Head.CFrame)
+                                    local an = abs(an1.X) + abs(an1.Y)
+                                    if an < minangle then
+                                        minangle = an
+                                        lastpart = plr.Character.Head
+                                    end
+                                end
+                            end
+                            end)
+                        end
+                        if TeamBased then
+                            if plr.Team.Name ~= lplr.Team.Name then
+                                gg(plr)
+                            end
+                        else
+                            gg(plr)
+                        end
+                        --print(math.deg(minangle))
+                        if lastpart then
+                            aimatpart = lastpart
+                            aimatpart.Parent.Humanoid.Died:Connect(function()
+                                if aimatpart == lastpart then
+                                    aimatpart = nil
+                                end
+                            end)
+                        
+                    end
+                end
+            end
+        end
+    end)
+end)
+local oldheadpos
+local lastaimapart
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+    if uis:IsKeyDown(Enum.KeyCode.RightBracket) or uis:IsKeyDown(Enum.KeyCode.LeftBracket) then
+        if upping then
+            ballisticsboost = ballisticsboost + dt/1.9
+        elseif downing then
+            ballisticsboost = ballisticsboost - dt/1.9
+        end
+    end
+    if movementcounting then
+        st1_2.TextColor3 = Color3.new(0.0431373, 1, 0.0745098)
+        st1_2.Text = "Current ballistics: "..tostring(math.floor(ballisticsboost*10)/10)
+    else
+        st1_2.TextColor3 = Color3.new(1,0,0)
+    end
+    espstatustext.Text = "Esp loop :"..tostring(autoesp)
+    if aimatpart and lplr.Character and lplr.Character.Head then
+        if BetterDeathCount and lastaimapart and lastaimapart == aimatpart then
+            local dist = (oldheadpos - aimatpart.CFrame.p).magnitude
+            if dist > 40 then
+                aimatpart = nil
+            end
+        end
+        lastaimapart = aimatpart
+        oldheadpos = lastaimapart.CFrame.p
+        do 
+            if aimatpart.Parent == plrs.LocalPlayer.Character then
+                aimatpart = nil
+            end
+            aimat(aimatpart)
+            pcall(function()
+                if Aim_Assist == true then
+                    local cf1 = CFrame.new(cam.CFrame.p, aimatpart.CFrame.p) * CFrame.new(0, 0, -4)
+                    local r1 = Ray.new(cf1.p, cf1.LookVector * 1000)
+                    local obj, pos = game.Workspace:FindPartOnRayWithIgnoreList(r1,  {lplr.Character.Head})
+                    local dist = (aimatpart.CFrame.p- pos).magnitude
+                    if obj then
+                        --print(obj:GetFullName())
+                    end
+                    if not obj or dist > 6 then
+                        aimatpart = nil
+                        --print("ooof")
+                    end
+                    canaimat = false
+                    delay(.5, function()
+                        canaimat = true
+                    end)
+                end
+            end)
+        end
+        
+        
+        
+    end
+end)
+
+
+delay(0, function()
+    while wait(espupdatetime) do
+        if autoesp == true then
+            pcall(function()
+            f.addesp()
+            end)
+        end
+    end
+end)
+warn("loaded")
+end)
+end)
+
+ESP.MouseButton1Click:Connect(function()
+    PLR = game.Players.LocalPlayer
+MOUSE  = PLR:GetMouse()
+
+function CREATE(BASE, TEAM)
+    local ESP_MAIN                   = Instance.new('BillboardGui', PLR.PlayerGui)
+    local ESP_DOT                    = Instance.new('Frame', ESP_MAIN)
+    local ESP_NAME                   = Instance.new('TextLabel', ESP_MAIN)
+    
+    ESP_MAIN.Name                    = 'ESP'
+    ESP_MAIN.Adornee                 = BASE
+    ESP_MAIN.AlwaysOnTop             = true
+    ESP_MAIN.ExtentsOffset           = Vector3.new(0, 1, 0)
+    ESP_MAIN.Size                    = UDim2.new(0, 5, 0, 5)
+    
+    ESP_DOT.Name                     = 'DOT'
+    ESP_DOT.BackgroundColor          = BrickColor.new('Institutional white')
+    ESP_DOT.BackgroundTransparency   = 0.3
+    ESP_DOT.BorderSizePixel          = 0
+    ESP_DOT.Position                 = UDim2.new(-0.5, 0, -0.5, 0)
+    ESP_DOT.Size                     = UDim2.new(2, 0, 2, 0)
+    ESP_DOT.Visible                  = true
+    ESP_DOT.ZIndex                   = 10
+    
+    ESP_NAME.Name                    = 'NAME'
+    ESP_NAME.BackgroundColor3        = Color3.new(255, 255, 255)
+    ESP_NAME.BackgroundTransparency  = 1
+    ESP_NAME.BorderSizePixel         = 0
+    ESP_NAME.Position                = UDim2.new(0, 0, 0, -40)
+    ESP_NAME.Size                    = UDim2.new(1, 0, 10, 0)
+    ESP_NAME.Visible                 = true
+    ESP_NAME.ZIndex                  = 10
+    ESP_NAME.Font                    = 'SciFi'
+    ESP_NAME.FontSize                = 'Size14'
+    ESP_NAME.Text                    = BASE.Parent.Name:upper()
+    ESP_NAME.TextColor               = BrickColor.new('Institutional white')
+end
+
+function CLEAR()
+    for _,v in pairs(PLR.PlayerGui:children()) do
+        if v.Name == 'ESP' and v:IsA('BillboardGui') then
+            v:Destroy()
+        end
+    end
+end
+
+function FIND()
+    CLEAR()
+    spawn(function()
+        while wait(0.01) do
+                CLEAR()
+                for i,v in pairs(game.Players:GetChildren()) do
+                    if v.Character and v.Character:FindFirstChild('Head') then
+                            if v.Team == PLR.Team then
+                                   else
+                                if v.Character:FindFirstChild('Head') then
+                                CREATE(v.Character.Head, true)
+                            end
+                        end
+                    end
+                end
+            end        
+        wait(1)
+    end)
+end
+
+FIND()
+print('YEETWARE.GG HAS PROBLEMS WITH ESP')
+end)
+
+Spinbot.MouseButton1Down:connect(function()
+    if not sideways
+    then
+     sideways = true
+    repeat if sideways then
+--sideways
+wait(0.01)
+AnimationId      = "754658275"
+local Anim       = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://"..AnimationId
+local k          = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1.5)
+end
+     
+    until sideways == false
+    else
+         sideways = false
+    end
+end)
+Spinbot.MouseButton1Down:connect(function()
+    if not yawfakelag
+    then
+     yawfakelag = true
+    repeat if yawfakelag then
+--fakelag
+wait(0.01)
+AnimationId      = "754658275"
+local Anim       = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://"..AnimationId
+local k          = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(8)
+end
+     
+    until yawfakelag == false
+    else
+         yawfakelag = false
+    end
+end)
+Spinbot.MouseButton1Down:connect(function()
+    if not backward then
+    backward = true
+    repeat if backward then
+wait(0.001)
+AnimationId      = "754658275"
+local Anim       = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://"..AnimationId
+local k          = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(3.2)
+end until backward == false
+    else
+        backward = false
+    end
+end)
+
+game:GetService("UserInputService").InputBegan:connect(function(key)
+if key.KeyCode == Enum.KeyCode.RightShift then
+if opened == true then
+opened = false
+Main.Visible = false
+elseif opened == false then
+opened = true
+Main.Visible = true
+end
+end
+end)
+
+game.StarterGui:SetCore("SendNotification",{Title="YEETWARE.CBR",Text="Loading in, thanks for using YEETWARE."})
+wait(1)
+game.StarterGui:SetCore("SendNotification",{Title="YEETWARE.CBR",Text="Loaded in, you can Toggle the GUI by pressing Rightshift"})
+
+function SCRIPT_GPVN85_FAKESCRIPT() -- Introduce.Script 
+	local script = Instance.new('Script')
+	script.Parent = Introduce
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		
+		counter = 0
+		
+		while wait(0.01) do
+			script.Parent.BorderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+			
+			counter = counter + 0.01
+		end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GPVN85_FAKESCRIPT))
+function SCRIPT_SVFZ84_FAKESCRIPT() -- ButtonFrame.Script 
+	local script = Instance.new('Script')
+	script.Parent = ButtonFrame
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		
+		counter = 0
+		
+		while wait(0.01) do
+			script.Parent.BorderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+			
+			counter = counter + 0.01
+		end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_SVFZ84_FAKESCRIPT))
+function SCRIPT_XHXB87_FAKESCRIPT() -- Main.Script 
+	local script = Instance.new('Script')
+	script.Parent = Main
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		
+		counter = 0
+		
+		while wait(0.01) do
+			script.Parent.BorderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+			
+			counter = counter + 0.01
+		end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_XHXB87_FAKESCRIPT))
